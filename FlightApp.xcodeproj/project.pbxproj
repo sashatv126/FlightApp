@@ -15,6 +15,23 @@
 		CA4C8B5B2AE1C0A100BADA65 /* FlightAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B5A2AE1C0A100BADA65 /* FlightAppTests.swift */; };
 		CA4C8B652AE1C0A100BADA65 /* FlightAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B642AE1C0A100BADA65 /* FlightAppUITests.swift */; };
 		CA4C8B672AE1C0A100BADA65 /* FlightAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B662AE1C0A100BADA65 /* FlightAppUITestsLaunchTests.swift */; };
+		CA4C8B802AE1C5B900BADA65 /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */; };
+		CA4C8B872AE1C5B900BADA65 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B862AE1C5B900BADA65 /* NetworkServiceTests.swift */; };
+		CA4C8B882AE1C5B900BADA65 /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = CA4C8B7A2AE1C5B900BADA65 /* NetworkService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA4C8B8B2AE1C5B900BADA65 /* NetworkService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */; };
+		CA4C8B8C2AE1C5B900BADA65 /* NetworkService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA4C8B992AE1C65100BADA65 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B982AE1C65100BADA65 /* Network.swift */; };
+		CA4C8B9C2AE1CF9F00BADA65 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B9B2AE1CF9F00BADA65 /* APIError.swift */; };
+		CA4C8BA22AE1D01C00BADA65 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BA12AE1D01C00BADA65 /* NetworkConfig.swift */; };
+		CA4C8BA42AE1D07600BADA65 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BA32AE1D07600BADA65 /* NetworkLogger.swift */; };
+		CA4C8BA92AE1D11600BADA65 /* FlightsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BA82AE1D11600BADA65 /* FlightsEndpoint.swift */; };
+		CA4C8BAE2AE1D1ED00BADA65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BAD2AE1D1ED00BADA65 /* HomeViewModel.swift */; };
+		CA4C8BB02AE1D81300BADA65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BAF2AE1D81300BADA65 /* Endpoint.swift */; };
+		CA4C8BB82AE26B6700BADA65 /* ResponseMaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BB72AE26B6700BADA65 /* ResponseMaper.swift */; };
+		CA4C8BBB2AE26E1B00BADA65 /* APIParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BBA2AE26E1B00BADA65 /* APIParseService.swift */; };
+		CA4C8BBE2AE2724500BADA65 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BBD2AE2724500BADA65 /* NetworkProvider.swift */; };
+		CA4C8BC12AE276C000BADA65 /* Encodable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BC02AE276C000BADA65 /* Encodable + Extension.swift */; };
+		CA4C8BC72AE280F800BADA65 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BC62AE280F800BADA65 /* NetworkConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +49,42 @@
 			remoteGlobalIDString = CA4C8B432AE1C0A000BADA65;
 			remoteInfo = FlightApp;
 		};
+		CA4C8B812AE1C5B900BADA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA4C8B772AE1C5B900BADA65;
+			remoteInfo = NetworkService;
+		};
+		CA4C8B832AE1C5B900BADA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA4C8B432AE1C0A000BADA65;
+			remoteInfo = FlightApp;
+		};
+		CA4C8B892AE1C5B900BADA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA4C8B772AE1C5B900BADA65;
+			remoteInfo = NetworkService;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA4C8B902AE1C5B900BADA65 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA4C8B8C2AE1C5B900BADA65 /* NetworkService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CA4C8B442AE1C0A000BADA65 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +98,22 @@
 		CA4C8B602AE1C0A100BADA65 /* FlightAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4C8B642AE1C0A100BADA65 /* FlightAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppUITests.swift; sourceTree = "<group>"; };
 		CA4C8B662AE1C0A100BADA65 /* FlightAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4C8B7A2AE1C5B900BADA65 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		CA4C8B7F2AE1C5B900BADA65 /* NetworkServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4C8B862AE1C5B900BADA65 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		CA4C8B982AE1C65100BADA65 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CA4C8B9B2AE1CF9F00BADA65 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CA4C8BA12AE1D01C00BADA65 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		CA4C8BA32AE1D07600BADA65 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		CA4C8BA82AE1D11600BADA65 /* FlightsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsEndpoint.swift; sourceTree = "<group>"; };
+		CA4C8BAD2AE1D1ED00BADA65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CA4C8BAF2AE1D81300BADA65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CA4C8BB72AE26B6700BADA65 /* ResponseMaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMaper.swift; sourceTree = "<group>"; };
+		CA4C8BBA2AE26E1B00BADA65 /* APIParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseService.swift; sourceTree = "<group>"; };
+		CA4C8BBD2AE2724500BADA65 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		CA4C8BC02AE276C000BADA65 /* Encodable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable + Extension.swift"; sourceTree = "<group>"; };
+		CA4C8BC62AE280F800BADA65 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4C8B8B2AE1C5B900BADA65 /* NetworkService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +139,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA4C8B752AE1C5B900BADA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA4C8B7C2AE1C5B900BADA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4C8B802AE1C5B900BADA65 /* NetworkService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +163,8 @@
 				CA4C8B462AE1C0A000BADA65 /* FlightApp */,
 				CA4C8B592AE1C0A100BADA65 /* FlightAppTests */,
 				CA4C8B632AE1C0A100BADA65 /* FlightAppUITests */,
+				CA4C8B792AE1C5B900BADA65 /* NetworkService */,
+				CA4C8B852AE1C5B900BADA65 /* NetworkServiceTests */,
 				CA4C8B452AE1C0A000BADA65 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +175,8 @@
 				CA4C8B442AE1C0A000BADA65 /* FlightApp.app */,
 				CA4C8B562AE1C0A100BADA65 /* FlightAppTests.xctest */,
 				CA4C8B602AE1C0A100BADA65 /* FlightAppUITests.xctest */,
+				CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */,
+				CA4C8B7F2AE1C5B900BADA65 /* NetworkServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +184,9 @@
 		CA4C8B462AE1C0A000BADA65 /* FlightApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C8BC42AE280E900BADA65 /* Common */,
+				CA4C8BB12AE2511A00BADA65 /* Core */,
+				CA4C8BA52AE1D0A500BADA65 /* Home */,
 				CA4C8B472AE1C0A000BADA65 /* FlightAppApp.swift */,
 				CA4C8B492AE1C0A000BADA65 /* ContentView.swift */,
 				CA4C8B4B2AE1C0A000BADA65 /* Item.swift */,
@@ -130,7 +221,203 @@
 			path = FlightAppUITests;
 			sourceTree = "<group>";
 		};
+		CA4C8B792AE1C5B900BADA65 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8B962AE1C5CD00BADA65 /* Source */,
+				CA4C8B7A2AE1C5B900BADA65 /* NetworkService.h */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		CA4C8B852AE1C5B900BADA65 /* NetworkServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8B862AE1C5B900BADA65 /* NetworkServiceTests.swift */,
+			);
+			path = NetworkServiceTests;
+			sourceTree = "<group>";
+		};
+		CA4C8B962AE1C5CD00BADA65 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BBF2AE276B100BADA65 /* Extension */,
+				CA4C8BBC2AE2711D00BADA65 /* NetworkProvider */,
+				CA4C8BB92AE26E0600BADA65 /* Parser */,
+				CA4C8B972AE1C63800BADA65 /* Network */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CA4C8B972AE1C63800BADA65 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BB62AE26B5400BADA65 /* Maper */,
+				CA4C8B9F2AE1CFC900BADA65 /* Endpoint */,
+				CA4C8B9E2AE1CFBD00BADA65 /* Config */,
+				CA4C8B9D2AE1CFB600BADA65 /* Logger */,
+				CA4C8B9A2AE1CF9700BADA65 /* Error */,
+				CA4C8B982AE1C65100BADA65 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CA4C8B9A2AE1CF9700BADA65 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8B9B2AE1CF9F00BADA65 /* APIError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		CA4C8B9D2AE1CFB600BADA65 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BA32AE1D07600BADA65 /* NetworkLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		CA4C8B9E2AE1CFBD00BADA65 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BA12AE1D01C00BADA65 /* NetworkConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CA4C8B9F2AE1CFC900BADA65 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BAF2AE1D81300BADA65 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		CA4C8BA52AE1D0A500BADA65 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BC32AE280C400BADA65 /* Domain */,
+				CA4C8BC22AE280B900BADA65 /* Data */,
+				CA4C8BAA2AE1D1CD00BADA65 /* Presentation */,
+				CA4C8BA62AE1D0B700BADA65 /* API */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CA4C8BA62AE1D0B700BADA65 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BA82AE1D11600BADA65 /* FlightsEndpoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CA4C8BAA2AE1D1CD00BADA65 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BAB2AE1D1D500BADA65 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CA4C8BAB2AE1D1D500BADA65 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BAD2AE1D1ED00BADA65 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA4C8BB12AE2511A00BADA65 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BB32AE2512600BADA65 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CA4C8BB32AE2512600BADA65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA4C8BB62AE26B5400BADA65 /* Maper */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BB72AE26B6700BADA65 /* ResponseMaper.swift */,
+			);
+			path = Maper;
+			sourceTree = "<group>";
+		};
+		CA4C8BB92AE26E0600BADA65 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BBA2AE26E1B00BADA65 /* APIParseService.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		CA4C8BBC2AE2711D00BADA65 /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BBD2AE2724500BADA65 /* NetworkProvider.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		CA4C8BBF2AE276B100BADA65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BC02AE276C000BADA65 /* Encodable + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CA4C8BC22AE280B900BADA65 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CA4C8BC32AE280C400BADA65 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CA4C8BC42AE280E900BADA65 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BC52AE280ED00BADA65 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CA4C8BC52AE280ED00BADA65 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C8BC62AE280F800BADA65 /* NetworkConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CA4C8B732AE1C5B900BADA65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4C8B882AE1C5B900BADA65 /* NetworkService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CA4C8B432AE1C0A000BADA65 /* FlightApp */ = {
@@ -140,10 +427,12 @@
 				CA4C8B402AE1C0A000BADA65 /* Sources */,
 				CA4C8B412AE1C0A000BADA65 /* Frameworks */,
 				CA4C8B422AE1C0A000BADA65 /* Resources */,
+				CA4C8B902AE1C5B900BADA65 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA4C8B8A2AE1C5B900BADA65 /* PBXTargetDependency */,
 			);
 			name = FlightApp;
 			productName = FlightApp;
@@ -186,6 +475,43 @@
 			productReference = CA4C8B602AE1C0A100BADA65 /* FlightAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CA4C8B772AE1C5B900BADA65 /* NetworkService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA4C8B8D2AE1C5B900BADA65 /* Build configuration list for PBXNativeTarget "NetworkService" */;
+			buildPhases = (
+				CA4C8B732AE1C5B900BADA65 /* Headers */,
+				CA4C8B742AE1C5B900BADA65 /* Sources */,
+				CA4C8B752AE1C5B900BADA65 /* Frameworks */,
+				CA4C8B762AE1C5B900BADA65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkService;
+			productName = NetworkService;
+			productReference = CA4C8B782AE1C5B900BADA65 /* NetworkService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA4C8B7E2AE1C5B900BADA65 /* NetworkServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA4C8B912AE1C5B900BADA65 /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */;
+			buildPhases = (
+				CA4C8B7B2AE1C5B900BADA65 /* Sources */,
+				CA4C8B7C2AE1C5B900BADA65 /* Frameworks */,
+				CA4C8B7D2AE1C5B900BADA65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA4C8B822AE1C5B900BADA65 /* PBXTargetDependency */,
+				CA4C8B842AE1C5B900BADA65 /* PBXTargetDependency */,
+			);
+			name = NetworkServiceTests;
+			productName = NetworkServiceTests;
+			productReference = CA4C8B7F2AE1C5B900BADA65 /* NetworkServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,6 +533,14 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = CA4C8B432AE1C0A000BADA65;
 					};
+					CA4C8B772AE1C5B900BADA65 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+					CA4C8B7E2AE1C5B900BADA65 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CA4C8B432AE1C0A000BADA65;
+					};
 				};
 			};
 			buildConfigurationList = CA4C8B3F2AE1C0A000BADA65 /* Build configuration list for PBXProject "FlightApp" */;
@@ -225,6 +559,8 @@
 				CA4C8B432AE1C0A000BADA65 /* FlightApp */,
 				CA4C8B552AE1C0A100BADA65 /* FlightAppTests */,
 				CA4C8B5F2AE1C0A100BADA65 /* FlightAppUITests */,
+				CA4C8B772AE1C5B900BADA65 /* NetworkService */,
+				CA4C8B7E2AE1C5B900BADA65 /* NetworkServiceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +589,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA4C8B762AE1C5B900BADA65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA4C8B7D2AE1C5B900BADA65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,8 +610,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4C8BC72AE280F800BADA65 /* NetworkConstants.swift in Sources */,
+				CA4C8BAE2AE1D1ED00BADA65 /* HomeViewModel.swift in Sources */,
 				CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */,
 				CA4C8B4C2AE1C0A000BADA65 /* Item.swift in Sources */,
+				CA4C8BA92AE1D11600BADA65 /* FlightsEndpoint.swift in Sources */,
 				CA4C8B482AE1C0A000BADA65 /* FlightAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +636,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA4C8B742AE1C5B900BADA65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4C8BB82AE26B6700BADA65 /* ResponseMaper.swift in Sources */,
+				CA4C8BA42AE1D07600BADA65 /* NetworkLogger.swift in Sources */,
+				CA4C8B992AE1C65100BADA65 /* Network.swift in Sources */,
+				CA4C8B9C2AE1CF9F00BADA65 /* APIError.swift in Sources */,
+				CA4C8BBB2AE26E1B00BADA65 /* APIParseService.swift in Sources */,
+				CA4C8BC12AE276C000BADA65 /* Encodable + Extension.swift in Sources */,
+				CA4C8BBE2AE2724500BADA65 /* NetworkProvider.swift in Sources */,
+				CA4C8BA22AE1D01C00BADA65 /* NetworkConfig.swift in Sources */,
+				CA4C8BB02AE1D81300BADA65 /* Endpoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA4C8B7B2AE1C5B900BADA65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA4C8B872AE1C5B900BADA65 /* NetworkServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -295,6 +672,21 @@
 			isa = PBXTargetDependency;
 			target = CA4C8B432AE1C0A000BADA65 /* FlightApp */;
 			targetProxy = CA4C8B612AE1C0A100BADA65 /* PBXContainerItemProxy */;
+		};
+		CA4C8B822AE1C5B900BADA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA4C8B772AE1C5B900BADA65 /* NetworkService */;
+			targetProxy = CA4C8B812AE1C5B900BADA65 /* PBXContainerItemProxy */;
+		};
+		CA4C8B842AE1C5B900BADA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA4C8B432AE1C0A000BADA65 /* FlightApp */;
+			targetProxy = CA4C8B832AE1C5B900BADA65 /* PBXContainerItemProxy */;
+		};
+		CA4C8B8A2AE1C5B900BADA65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA4C8B772AE1C5B900BADA65 /* NetworkService */;
+			targetProxy = CA4C8B892AE1C5B900BADA65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,6 +813,7 @@
 		CA4C8B6B2AE1C0A100BADA65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +842,7 @@
 		CA4C8B6C2AE1C0A100BADA65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +940,109 @@
 			};
 			name = Release;
 		};
+		CA4C8B8E2AE1C5B900BADA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA4C8B8F2AE1C5B900BADA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.NetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA4C8B922AE1C5B900BADA65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlightApp";
+			};
+			name = Debug;
+		};
+		CA4C8B932AE1C5B900BADA65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.NetworkServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlightApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +1078,24 @@
 			buildConfigurations = (
 				CA4C8B712AE1C0A100BADA65 /* Debug */,
 				CA4C8B722AE1C0A100BADA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA4C8B8D2AE1C5B900BADA65 /* Build configuration list for PBXNativeTarget "NetworkService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA4C8B8E2AE1C5B900BADA65 /* Debug */,
+				CA4C8B8F2AE1C5B900BADA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA4C8B912AE1C5B900BADA65 /* Build configuration list for PBXNativeTarget "NetworkServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA4C8B922AE1C5B900BADA65 /* Debug */,
+				CA4C8B932AE1C5B900BADA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

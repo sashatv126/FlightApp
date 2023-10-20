@@ -7,14 +7,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView<ViewModel>: View where ViewModel: HomeViewModelProtocol {
+    @ObservedObject private var vm: ViewModel
+
+    init(vm: ViewModel) {
+        self._vm = ObservedObject(wrappedValue: vm)
+    }
+
     var body: some View {
         VStack {
-            Text("sasha")
+            Text("sad")
+            Button(vm.text) {
+                vm.buttonTapped()
+            }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: HomeViewModel())
 }
+

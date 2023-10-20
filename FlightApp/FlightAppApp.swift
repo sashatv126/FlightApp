@@ -12,7 +12,12 @@ import SwiftData
 struct FlightAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(vm: HomeViewModel())
         }
     }
 }
+
+protocol MainSceneFactoryProtocol {
+    @ViewBuilder
+    func makeHomeScene() -> ContentView<HomeViewModel>
+ }
