@@ -5,4 +5,6 @@
 //  Created by Александр Александрович on 20.10.2023.
 //
 
-import Foundation
+struct StartLocationEntity {
+    let startLocationCode = "LED"
+}

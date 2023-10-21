@@ -11,6 +11,6 @@ enum NetworkConstants {
     }
 
     enum Paths {
-        static let getCheap = "stream/api/avia-service/v1/suggests/getCheap"
+        static let getFlights = "stream/api/avia-service/v1/suggests/getCheap"
     }
 }

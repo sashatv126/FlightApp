@@ -16,15 +16,42 @@ struct ContentView<ViewModel>: View where ViewModel: HomeViewModelProtocol {
 
     var body: some View {
         VStack {
-            Text("sad")
-            Button(vm.text) {
-                vm.buttonTapped()
+            if vm.flights.isEmpty {
+                ProgressView()
+            } else {
+                FlightlistTableView(flights: vm.flights)
+            }
+        }
+        .onAppear(perform: {
+            vm.viewDidAppear()
+        })
+    }
+}
+
+struct FlightRowView: View {
+    let flight: Flight
+
+    var body: some View {
+        VStack {
+            Text(flight.startCity)
+            Text(flight.endCity)
+            Text(flight.startDate)
+            Text(flight.endDate)
+            Text(flight.serviceClass)
+            Text(flight.startLocationCode)
+        }
+        .padding()
+    }
+}
+
+struct FlightlistTableView: View {
+    let flights: [Flight]
+
+    var body: some View {
+        List {
+            ForEach(flights) { flight in
+                FlightRowView(flight: flight)
             }
         }
     }
 }
-
-#Preview {
-    ContentView(vm: HomeViewModel())
-}
-

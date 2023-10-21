@@ -1,0 +1,92 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NetworkService
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import NetworkService
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Swift.Encodable {
+  public func toData() -> Foundation.Data?
+}
+public protocol NetworkConfig {
+  var configuration: Foundation.URLSessionConfiguration { get }
+  var timeout: Foundation.TimeInterval { get }
+  var networkServiceType: Foundation.URLRequest.NetworkServiceType { get }
+  var cachePolicy: Foundation.URLRequest.CachePolicy { get }
+}
+public struct DefaultNetworkServiceConfig : NetworkService.NetworkConfig {
+  public var configuration: Foundation.URLSessionConfiguration
+  public var timeout: Foundation.TimeInterval
+  public var networkServiceType: Foundation.URLRequest.NetworkServiceType
+  public var cachePolicy: Foundation.URLRequest.CachePolicy
+  public init()
+}
+public protocol NetworkServiceProtocol {
+  #if compiler(>=5.3) && $AsyncAwait
+  func fetchRequest(endpoint: any NetworkService.Endpoint) async throws -> Swift.Result<Foundation.Data, NetworkService.ApiError>
+  #endif
+}
+final public class NetworkService {
+  public init(config: any NetworkService.NetworkConfig = DefaultNetworkServiceConfig())
+  @objc deinit
+}
+extension NetworkService.NetworkService : NetworkService.NetworkServiceProtocol {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func fetchRequest(endpoint: any NetworkService.Endpoint) async throws -> Swift.Result<Foundation.Data, NetworkService.ApiError>
+  #endif
+}
+public typealias HTTPHeaders = [Swift.String : Swift.String]?
+public protocol Endpoint {
+  var baseUrl: Swift.String { get }
+  var path: Swift.String { get }
+  var parameters: [Swift.String : Any]? { get }
+  var data: Foundation.Data? { get }
+  var header: NetworkService.HTTPHeaders { get }
+  var method: NetworkService.HTTPMethod { get }
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ApiError : Swift.Error {
+  case requestFailed(description: Swift.String)
+  case invalidRequest
+  case invalidData
+  case jsonParsingFailure(description: Swift.String)
+  case failedSerialization
+  case noInternet
+  case invalidResponse
+  case notFound
+  case badRequest(request: Swift.String)
+  case serverError
+  case unknownError
+  public var customDescription: Swift.String {
+    get
+  }
+}
+public protocol NetworkProviderProtocol {
+  #if compiler(>=5.3) && $AsyncAwait
+  func execute<Model>(endpoint: any NetworkService.Endpoint, modelType: Model.Type) async -> Swift.Result<Model, NetworkService.ApiError> where Model : Swift.Decodable
+  #endif
+}
+final public class NetworkProvider : NetworkService.NetworkProviderProtocol {
+  public init(networkService: any NetworkService.NetworkServiceProtocol)
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func execute<Model>(endpoint: any NetworkService.Endpoint, modelType: Model.Type) async -> Swift.Result<Model, NetworkService.ApiError> where Model : Swift.Decodable
+  #endif
+  @objc deinit
+}
+extension NetworkService.HTTPMethod : Swift.Equatable {}
+extension NetworkService.HTTPMethod : Swift.Hashable {}
+extension NetworkService.HTTPMethod : Swift.RawRepresentable {}

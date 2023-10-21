@@ -9,30 +9,39 @@ import Combine
 import NetworkService
 
 protocol HomeViewModelProtocol: ObservableObject {
-    var text: String { get }
+    var flights: [Flight] { get }
 
-    func buttonTapped()
+    func viewDidAppear()
 }
 
-final class HomeViewModel {
-    @Published var text = "V"
+@MainActor final class HomeViewModel {
+    @Published var flights: [Flight] = []
+    private let getFlightsUseCase: GetFlightsUseCaseProtocol
+
+    init(getFlightsUseCase: GetFlightsUseCaseProtocol) {
+        self.getFlightsUseCase = getFlightsUseCase
+    }
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
 
-    struct A: Encodable {
-        let startLocationCode: String
+    func viewDidAppear() {
+        getFlights()
     }
+}
 
-    func buttonTapped() {
-        let networkService = NetworkService()
-        let provider = NetworkProvider(networkService: networkService)
-        let headers: [String: String] = ["startLocationCode": "LED"]
-        let data = A(startLocationCode: "LED").toData()
-        let endpoint = FlightEndpoinCreater(baseUrl: NetworkConstants.BaseURL.wb,path: NetworkConstants.Paths.getCheap, data: data, header: headers, method: .post)
-        Task {
-            let result = await provider.execute(endpoint: endpoint, modelType: String.self)
-            print(result)
+private extension HomeViewModel {
+    func getFlights() {
+        let entity = StartLocationEntity()
+        Task { [weak self] in
+            let result = await self?.getFlightsUseCase.execute(entity: entity)
+            guard let result else { return }
+            switch result {
+            case .success(let model):
+                self?.flights = model.flights
+            case .failure(let failure):
+                print(failure)
+            }
         }
     }
 }

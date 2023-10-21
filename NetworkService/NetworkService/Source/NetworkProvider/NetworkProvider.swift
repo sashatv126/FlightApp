@@ -5,11 +5,11 @@
 //  Created by Александр Александрович on 20.10.2023.
 //
 
-protocol NetworkProviderProtocol {
+public protocol NetworkProviderProtocol {
     func execute<Model: Decodable>(endpoint: Endpoint, modelType: Model.Type) async -> Result<Model, ApiError>
 }
 
-final public class NetworkProvider {
+final public class NetworkProvider: NetworkProviderProtocol {
     private let networkService: NetworkServiceProtocol
 
     public init(networkService: NetworkServiceProtocol) {

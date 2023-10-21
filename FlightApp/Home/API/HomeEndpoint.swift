@@ -7,13 +7,13 @@
 
 import NetworkService
 
-struct FlightEndpoinCreater: Endpoint {
+struct HomeEndpoint: Endpoint {
 
-    var baseUrl: String = "dsad"
+    var baseUrl: String = NetworkConstants.BaseURL.wb
     var path: String
     var parameters: [String: Any]?
     var data: Data?
-    var header: HTTPHeaders
+    var header: HTTPHeaders = [:]
     var method: HTTPMethod
 }
 
