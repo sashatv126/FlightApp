@@ -15,7 +15,6 @@
 		CA36E20D2AE30CE700E075D8 /* DomainAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA36E20C2AE30CE700E075D8 /* DomainAPIError.swift */; };
 		CA36E2102AE30D5200E075D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA36E20F2AE30D5200E075D8 /* HomeRepository.swift */; };
 		CA36E2132AE310EB00E075D8 /* GetFlightsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA36E2122AE310EB00E075D8 /* GetFlightsUseCase.swift */; };
-		CA4C8B482AE1C0A000BADA65 /* FlightAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B472AE1C0A000BADA65 /* FlightAppApp.swift */; };
 		CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B492AE1C0A000BADA65 /* ContentView.swift */; };
 		CA4C8B4C2AE1C0A000BADA65 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8B4B2AE1C0A000BADA65 /* Item.swift */; };
 		CA4C8B4E2AE1C0A100BADA65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4C8B4D2AE1C0A100BADA65 /* Assets.xcassets */; };
@@ -29,6 +28,13 @@
 		CA4C8BCA2AE293E700BADA65 /* HomeNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C8BC92AE293E700BADA65 /* HomeNetworkProvider.swift */; };
 		CAADEE792AE32D0E00E9947C /* NetworkService.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */; };
 		CAADEE7A2AE32D0E00E9947C /* NetworkService.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAADEEB42AE3F7EB00E9947C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEB32AE3F7EB00E9947C /* AppDelegate.swift */; };
+		CAADEEB72AE3F80400E9947C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEB62AE3F80400E9947C /* SceneDelegate.swift */; };
+		CAADEEB82AE3F83100E9947C /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEEA62AE3F09F00E9947C /* Coordinator.framework */; };
+		CAADEEB92AE3F83100E9947C /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEEA62AE3F09F00E9947C /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEBB2AE3F84900E9947C /* HomeRouter.swift */; };
+		CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */; };
+		CAADEEC32AE4086D00E9947C /* HomeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,20 @@
 			remoteGlobalIDString = CA4C8B432AE1C0A000BADA65;
 			remoteInfo = FlightApp;
 		};
+		CAADEEA52AE3F09F00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CAADEE872AE3F07D00E9947C;
+			remoteInfo = Coordinator;
+		};
+		CAADEEA72AE3F09F00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CAADEE8F2AE3F07D00E9947C;
+			remoteInfo = CoordinatorTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +76,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CAADEE7A2AE32D0E00E9947C /* NetworkService.xcframework in Embed Frameworks */,
+				CAADEEB92AE3F83100E9947C /* Coordinator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +94,6 @@
 		CA36E2122AE310EB00E075D8 /* GetFlightsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlightsUseCase.swift; sourceTree = "<group>"; };
 		CA36E2492AE31D5000E075D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CA4C8B442AE1C0A000BADA65 /* FlightApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA4C8B472AE1C0A000BADA65 /* FlightAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAppApp.swift; sourceTree = "<group>"; };
 		CA4C8B492AE1C0A000BADA65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA4C8B4B2AE1C0A000BADA65 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CA4C8B4D2AE1C0A100BADA65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +108,12 @@
 		CA4C8BC62AE280F800BADA65 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		CA4C8BC92AE293E700BADA65 /* HomeNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkProvider.swift; sourceTree = "<group>"; };
 		CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NetworkService.xcframework; sourceTree = "<group>"; };
+		CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Coordinator.xcodeproj; path = Coordinator/Coordinator.xcodeproj; sourceTree = "<group>"; };
+		CAADEEB32AE3F7EB00E9947C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAADEEB62AE3F80400E9947C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAADEEBB2AE3F84900E9947C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAADEE792AE32D0E00E9947C /* NetworkService.xcframework in Frameworks */,
+				CAADEEB82AE3F83100E9947C /* Coordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +229,11 @@
 				CA4C8BB12AE2511A00BADA65 /* Core */,
 				CA4C8BA52AE1D0A500BADA65 /* Home */,
 				CA4C8B492AE1C0A000BADA65 /* ContentView.swift */,
-				CA4C8B472AE1C0A000BADA65 /* FlightAppApp.swift */,
 				CA4C8B4B2AE1C0A000BADA65 /* Item.swift */,
 				CA4C8B4D2AE1C0A100BADA65 /* Assets.xcassets */,
 				CA4C8B4F2AE1C0A100BADA65 /* Preview Content */,
+				CAADEEB32AE3F7EB00E9947C /* AppDelegate.swift */,
+				CAADEEB62AE3F80400E9947C /* SceneDelegate.swift */,
 			);
 			path = FlightApp;
 			sourceTree = "<group>";
@@ -257,6 +285,9 @@
 		CA4C8BAA2AE1D1CD00BADA65 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEEC42AE409AE00E9947C /* View */,
+				CAADEEC12AE4085E00E9947C /* Factory */,
+				CAADEEBA2AE3F83F00E9947C /* Router */,
 				CA4C8BAB2AE1D1D500BADA65 /* ViewModel */,
 			);
 			path = Presentation;
@@ -273,6 +304,7 @@
 		CA4C8BB12AE2511A00BADA65 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEEBE2AE407FD00E9947C /* Factories */,
 				CA4C8BB32AE2512600BADA65 /* Extensions */,
 			);
 			path = Core;
@@ -334,9 +366,50 @@
 		CAADEE772AE32D0E00E9947C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */,
 				CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAADEEA12AE3F09F00E9947C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEA62AE3F09F00E9947C /* Coordinator.framework */,
+				CAADEEA82AE3F09F00E9947C /* CoordinatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAADEEBA2AE3F83F00E9947C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEBB2AE3F84900E9947C /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CAADEEBE2AE407FD00E9947C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		CAADEEC12AE4085E00E9947C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		CAADEEC42AE409AE00E9947C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +503,12 @@
 			mainGroup = CA4C8B3B2AE1C0A000BADA65;
 			productRefGroup = CA4C8B452AE1C0A000BADA65 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CAADEEA12AE3F09F00E9947C /* Products */;
+					ProjectRef = CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CA4C8B432AE1C0A000BADA65 /* FlightApp */,
@@ -438,6 +517,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CAADEEA62AE3F09F00E9947C /* Coordinator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Coordinator.framework;
+			remoteRef = CAADEEA52AE3F09F00E9947C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAADEEA82AE3F09F00E9947C /* CoordinatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoordinatorTests.xctest;
+			remoteRef = CAADEEA72AE3F09F00E9947C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CA4C8B422AE1C0A000BADA65 /* Resources */ = {
@@ -476,15 +572,19 @@
 				CA4C8BCA2AE293E700BADA65 /* HomeNetworkProvider.swift in Sources */,
 				CA36E2052AE3077800E075D8 /* StartLocationDTO.swift in Sources */,
 				CA36E2072AE307D200E075D8 /* Flights.swift in Sources */,
+				CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */,
 				CA36E2012AE3073700E075D8 /* FlightsDTO.swift in Sources */,
+				CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */,
+				CAADEEB72AE3F80400E9947C /* SceneDelegate.swift in Sources */,
 				CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */,
+				CAADEEB42AE3F7EB00E9947C /* AppDelegate.swift in Sources */,
 				CA36E2102AE30D5200E075D8 /* HomeRepository.swift in Sources */,
 				CA36E20D2AE30CE700E075D8 /* DomainAPIError.swift in Sources */,
 				CA4C8B4C2AE1C0A000BADA65 /* Item.swift in Sources */,
 				CA36E2132AE310EB00E075D8 /* GetFlightsUseCase.swift in Sources */,
+				CAADEEC32AE4086D00E9947C /* HomeViewFactory.swift in Sources */,
 				CA36E2032AE3075800E075D8 /* StartLocationEntity.swift in Sources */,
 				CA4C8BA92AE1D11600BADA65 /* HomeEndpoint.swift in Sources */,
-				CA4C8B482AE1C0A000BADA65 /* FlightAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

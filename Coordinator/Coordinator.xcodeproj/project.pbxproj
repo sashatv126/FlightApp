@@ -10,6 +10,9 @@
 		CAADEE902AE3F07D00E9947C /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEE872AE3F07D00E9947C /* Coordinator.framework */; };
 		CAADEE952AE3F07D00E9947C /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEE942AE3F07D00E9947C /* CoordinatorTests.swift */; };
 		CAADEE962AE3F07D00E9947C /* Coordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = CAADEE8A2AE3F07D00E9947C /* Coordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAADEEAB2AE3F0B900E9947C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEAA2AE3F0B900E9947C /* Coordinator.swift */; };
+		CAADEEAF2AE3F5E400E9947C /* NavigationTranisitionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEAE2AE3F5E400E9947C /* NavigationTranisitionStyle.swift */; };
+		CAADEEB12AE3F62000E9947C /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEB02AE3F62000E9947C /* NavigationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 		CAADEE8A2AE3F07D00E9947C /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
 		CAADEE8F2AE3F07D00E9947C /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAADEE942AE3F07D00E9947C /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		CAADEEAA2AE3F0B900E9947C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CAADEEAE2AE3F5E400E9947C /* NavigationTranisitionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTranisitionStyle.swift; sourceTree = "<group>"; };
+		CAADEEB02AE3F62000E9947C /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,9 @@
 		CAADEE892AE3F07D00E9947C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEEAC2AE3F5BA00E9947C /* Assistant */,
 				CAADEE8A2AE3F07D00E9947C /* Coordinator.h */,
+				CAADEEAA2AE3F0B900E9947C /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -80,6 +88,16 @@
 				CAADEE942AE3F07D00E9947C /* CoordinatorTests.swift */,
 			);
 			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		CAADEEAC2AE3F5BA00E9947C /* Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEAE2AE3F5E400E9947C /* NavigationTranisitionStyle.swift */,
+				CAADEEB02AE3F62000E9947C /* NavigationRouter.swift */,
+			);
+			name = Assistant;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +162,7 @@
 				TargetAttributes = {
 					CAADEE862AE3F07D00E9947C = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					CAADEE8E2AE3F07D00E9947C = {
 						CreatedOnToolsVersion = 15.0;
@@ -191,6 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAADEEAF2AE3F5E400E9947C /* NavigationTranisitionStyle.swift in Sources */,
+				CAADEEAB2AE3F0B900E9947C /* Coordinator.swift in Sources */,
+				CAADEEB12AE3F62000E9947C /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +363,7 @@
 		CAADEE9A2AE3F07D00E9947C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -363,6 +386,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +395,7 @@
 		CAADEE9B2AE3F07D00E9947C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -401,6 +426,7 @@
 		CAADEE9D2AE3F07D00E9947C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +442,7 @@
 		CAADEE9E2AE3F07D00E9947C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

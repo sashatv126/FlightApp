@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Coordinator
 
 struct ContentView<ViewModel>: View where ViewModel: HomeViewModelProtocol {
     @ObservedObject private var vm: ViewModel
+    @EnvironmentObject var coordinator: Coordinator<HomeRouter>
 
     init(vm: ViewModel) {
         self._vm = ObservedObject(wrappedValue: vm)

@@ -5,4 +5,8 @@
 //  Created by Александр Александрович on 21.10.2023.
 //
 
-import Foundation
+public enum NavigationTranisitionStyle {
+    case push
+    case presentModally
+    case presentFullscreen
+}
