@@ -22,6 +22,7 @@ struct ContentView<ViewModel>: View where ViewModel: HomeViewModelProtocol {
                 ProgressView()
             } else {
                 FlightlistTableView(flights: vm.flights)
+                    .environmentObject(coordinator)
             }
         }
         .onAppear(perform: {
@@ -35,24 +36,32 @@ struct FlightRowView: View {
 
     var body: some View {
         VStack {
-            Text(flight.startCity)
-            Text(flight.endCity)
-            Text(flight.startDate)
-            Text(flight.endDate)
-            Text(flight.serviceClass)
-            Text(flight.startLocationCode)
+            HStack {
+                Text(flight.startCity)
+                Text(flight.endCity)
+            }
+
+            HStack {
+                Text(flight.startDate)
+                Text(flight.endDate)
+            }
         }
         .padding()
     }
 }
 
 struct FlightlistTableView: View {
+    @EnvironmentObject var coordinator: Coordinator<HomeRouter>
     let flights: [Flight]
 
     var body: some View {
         List {
             ForEach(flights) { flight in
                 FlightRowView(flight: flight)
+                    .onTapGesture {
+                        print(flight.id)
+                        coordinator.show(route: .detail)
+                    }
             }
         }
     }

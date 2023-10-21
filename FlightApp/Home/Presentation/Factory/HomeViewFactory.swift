@@ -6,9 +6,11 @@
 //
 
 import NetworkService
+import SwiftUI
 
 protocol HomeViewFactoryProtocol {
     @MainActor func makeHomeView() -> ContentView<HomeViewModel>
+    func makeDetailView() -> EmptyView
 }
 
 struct HomeViewFactory: HomeViewFactoryProtocol {
@@ -24,4 +26,20 @@ struct HomeViewFactory: HomeViewFactoryProtocol {
         let view = ContentView(vm: viewModel)
         return view
     }
+
+    func makeDetailView() -> EmptyView {
+        return EmptyView()
+    }
+}
+
+protocol ProviderFactoryProtocol {
+
+}
+
+final class ProviderFactory {
+    
+}
+
+protocol HomeAPIDataSourceFactory {
+
 }

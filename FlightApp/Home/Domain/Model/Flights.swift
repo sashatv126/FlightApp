@@ -13,7 +13,6 @@ struct Flights {
 
 // MARK: - Flight
 struct Flight: Identifiable {
-    let id = UUID()
     let startDate: String
     let endDate: String
     let startLocationCode: String
@@ -24,6 +23,10 @@ struct Flight: Identifiable {
     let seats: [Seat]
     let price: Int
     let searchToken: String?
+
+    var id: String {
+        return searchToken ?? UUID().uuidString
+    }
 }
 
 // MARK: - Seat

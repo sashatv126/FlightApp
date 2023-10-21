@@ -17,6 +17,7 @@ protocol HomeViewModelProtocol: ObservableObject {
 @MainActor final class HomeViewModel {
     @Published var flights: [Flight] = []
     private let getFlightsUseCase: GetFlightsUseCaseProtocol
+    private var needToUpdate = true
 
     init(getFlightsUseCase: GetFlightsUseCaseProtocol) {
         self.getFlightsUseCase = getFlightsUseCase
@@ -32,6 +33,7 @@ extension HomeViewModel: HomeViewModelProtocol {
 
 private extension HomeViewModel {
     func getFlights() {
+        guard needToUpdate else { return }
         let entity = StartLocationEntity()
         Task { [weak self] in
             let result = await self?.getFlightsUseCase.execute(entity: entity)
@@ -43,5 +45,6 @@ private extension HomeViewModel {
                 print(failure)
             }
         }
+        needToUpdate = false
     }
 }
