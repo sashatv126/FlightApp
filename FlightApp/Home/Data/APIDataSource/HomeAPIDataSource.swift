@@ -25,8 +25,8 @@ final class HomeAPIDataSource {
 extension HomeAPIDataSource: HomeAPIDataSourceProtocol {
     func execute(dto: StartLocationDTO) async -> Result<FlightsDTO,ApiError> {
         let endpoint = provider.getFlights(dto: dto)
-        let result  = await networkProvider.execute(endpoint: endpoint,
-                                                    modelType: FlightsDTO.self)
+        let result = await networkProvider.execute(endpoint: endpoint,
+                                                   modelType: FlightsDTO.self)
         return result
     }
 }

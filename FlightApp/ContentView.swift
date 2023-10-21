@@ -55,3 +55,4 @@ struct FlightlistTableView: View {
         }
     }
 }
+

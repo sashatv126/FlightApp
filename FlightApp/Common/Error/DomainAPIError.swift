@@ -62,6 +62,7 @@ extension DomainAPIError {
             self = .serverError
         case .unknownError:
             self = .unknownError
+        @unknown default: fatalError("Name of this error doesn't exist")
         }
     }
 }
