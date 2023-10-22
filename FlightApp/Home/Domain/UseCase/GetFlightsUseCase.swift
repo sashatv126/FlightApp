@@ -6,7 +6,7 @@
 //
 
 protocol GetFlightsUseCaseProtocol {
-    func execute(entity: StartLocationEntity) async -> Result<Flights,DomainAPIError>
+    func execute(entity: StartLocationEntity) async -> Result<AllFlights,DomainAPIError>
 }
 
 final class GetFlightsUseCase {
@@ -18,22 +18,23 @@ final class GetFlightsUseCase {
 }
 
 extension GetFlightsUseCase: GetFlightsUseCaseProtocol {
-    func execute(entity: StartLocationEntity) async -> Result<Flights,DomainAPIError> {
+    func execute(entity: StartLocationEntity) async -> Result<AllFlights,DomainAPIError> {
         let dto = StartLocationDTO(entity: entity)
         let result = await repository.execute(dto: dto)
         switch result {
-        case .success(let model):
-            let sortedModel = sortByDepartureDate(model: model)
-            return .success(sortedModel)
+        case .success(let airport):
+            let dto = AirportDTO(entity: airport)
+            let result = await repository.execute(dto: dto)
+            switch result {
+            case .success(let flights):
+                let allFlights = flights.data.map { FullInfoOfFlight(airport: airport,
+                                                                     flight: $0)}
+                return .success(allFlights)
+            case .failure(let error):
+                return .failure(error)
+            }
         case .failure(let error):
             return .failure(error)
         }
-    }
-}
-
-private extension GetFlightsUseCase {
-    func sortByDepartureDate(model: Flights) -> Flights {
-        let sortedFlights = model.flights.sorted(by: { $0.endCity > $1.endCity })
-        return Flights(flights: sortedFlights)
     }
 }

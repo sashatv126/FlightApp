@@ -8,29 +8,17 @@
 import Foundation
 
 struct Flights {
-    let flights: [Flight]
+    let data: [Flight]
 }
 
-// MARK: - Flight
+// MARK: - Datum
 struct Flight: Identifiable {
-    let startDate: String
-    let endDate: String
-    let startLocationCode: String
-    let endLocationCode: String
-    let startCity: String
-    let endCity: String
-    let serviceClass: String
-    let seats: [Seat]
-    let price: Int
-    let searchToken: String?
-
-    var id: String {
-        return searchToken ?? UUID().uuidString
-    }
+    let id = UUID()
+    let name, iataCode: String
+    let timeZone: Time?
 }
 
-// MARK: - Seat
-struct Seat: Codable {
-    let passengerType: String
-    let count: Int
+// MARK: - TimeZone
+struct Time {
+    let offSet: String?
 }

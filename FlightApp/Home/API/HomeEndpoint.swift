@@ -6,10 +6,16 @@
 //
 
 import NetworkService
+import KeychainManager
 
 enum HomeEndpoint {
 
     case nearAirPort(entity: StartLocationDTO)
+    case flights(entity: AirportDTO)
+
+    var keychain: KeychainManager<AppKeys> {
+        return KeychainManager<AppKeys>()
+    }
 }
 
 extension HomeEndpoint: Endpoint {
@@ -18,7 +24,13 @@ extension HomeEndpoint: Endpoint {
     }
     
     var path: String {
-        return NetworkConstants.Paths.getFlights
+        switch self {
+        case .nearAirPort:
+            return NetworkConstants.Paths.airports
+        case .flights:
+            return NetworkConstants.Paths.flights
+        }
+
     }
     
     var parameters: [String : Any]? {
@@ -26,23 +38,25 @@ extension HomeEndpoint: Endpoint {
         case .nearAirPort(let entity):
             return ["latitude": entity.latitude,
                     "longitude": entity.longitude]
+        case .flights(entity: let entity):
+            return  ["departureAirportCode": entity.iataCode]
         }
     }
     
     var data: Data? {
-        switch self {
-        case .nearAirPort:
-            return nil
-        }
+        return nil
     }
     
     var header: HTTPHeaders {
-        return ["Authorization":"Bearer \(NetworkConstants.APIKey.flightsApiKey)"]
+        let token = keychain.loadValue(by: .accessToken, as: String.self)
+        return ["Authorization":"Bearer \(token ?? "")"]
     }
     
     var method: HTTPMethod {
         switch self {
         case .nearAirPort:
+            return .get
+        case .flights:
             return .get
         }
     }

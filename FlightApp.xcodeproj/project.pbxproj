@@ -51,11 +51,13 @@
 		CAADEF5D2AE5907400E9947C /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */; };
 		CAADEF5F2AE5911000E9947C /* TokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF5E2AE5911000E9947C /* TokenEndpoint.swift */; };
 		CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF622AE5914500E9947C /* APIConstants.swift */; };
-		CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF642AE5921300E9947C /* APIKeyModel.swift */; };
 		CAADEF672AE592D200E9947C /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF662AE592D200E9947C /* TokenProvider.swift */; };
 		CAADEF6A2AE594E400E9947C /* TokenManagerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF692AE594E400E9947C /* TokenManagerKey.swift */; };
 		CAADEF6D2AE5969100E9947C /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF6C2AE5969100E9947C /* AppManager.swift */; };
 		CAADEF702AE59BCE00E9947C /* TokenManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF6F2AE59BCE00E9947C /* TokenManagerFactory.swift */; };
+		CAADEF792AE5BCB100E9947C /* NearAirportDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF782AE5BCB100E9947C /* NearAirportDTO.swift */; };
+		CAADEF7B2AE5C86700E9947C /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF7A2AE5C86700E9947C /* Airport.swift */; };
+		CAADEF7D2AE5C9B500E9947C /* FullFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF7C2AE5C9B500E9947C /* FullFlight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,11 +189,13 @@
 		CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		CAADEF5E2AE5911000E9947C /* TokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEndpoint.swift; sourceTree = "<group>"; };
 		CAADEF622AE5914500E9947C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		CAADEF642AE5921300E9947C /* APIKeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyModel.swift; sourceTree = "<group>"; };
 		CAADEF662AE592D200E9947C /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
 		CAADEF692AE594E400E9947C /* TokenManagerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerKey.swift; sourceTree = "<group>"; };
 		CAADEF6C2AE5969100E9947C /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		CAADEF6F2AE59BCE00E9947C /* TokenManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerFactory.swift; sourceTree = "<group>"; };
+		CAADEF782AE5BCB100E9947C /* NearAirportDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearAirportDTO.swift; sourceTree = "<group>"; };
+		CAADEF7A2AE5C86700E9947C /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		CAADEF7C2AE5C9B500E9947C /* FullFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullFlight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 			children = (
 				CA36E2002AE3073700E075D8 /* FlightsDTO.swift */,
 				CA36E2042AE3077800E075D8 /* StartLocationDTO.swift */,
+				CAADEF782AE5BCB100E9947C /* NearAirportDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -253,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				CA36E2062AE307D200E075D8 /* Flights.swift */,
+				CAADEF7A2AE5C86700E9947C /* Airport.swift */,
+				CAADEF7C2AE5C9B500E9947C /* FullFlight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -537,7 +544,6 @@
 			isa = PBXGroup;
 			children = (
 				CAADEF6E2AE59BC200E9947C /* Factory */,
-				CAADEF602AE5913100E9947C /* Entity */,
 				CAADEF592AE5905700E9947C /* Model */,
 				CAADEF582AE58FF800E9947C /* Constants */,
 				CAADEF572AE58FEA00E9947C /* Endpoint */,
@@ -588,14 +594,6 @@
 				CAADEF5A2AE5905F00E9947C /* UserData.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CAADEF602AE5913100E9947C /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				CAADEF642AE5921300E9947C /* APIKeyModel.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		CAADEF682AE594C900E9947C /* Keys */ = {
@@ -869,10 +867,13 @@
 				CA36E2072AE307D200E075D8 /* Flights.swift in Sources */,
 				CAADEF2B2AE57CCA00E9947C /* LocationManager.swift in Sources */,
 				CAADEF6D2AE5969100E9947C /* AppManager.swift in Sources */,
+				CAADEF7D2AE5C9B500E9947C /* FullFlight.swift in Sources */,
 				CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */,
+				CAADEF7B2AE5C86700E9947C /* Airport.swift in Sources */,
 				CA36E2012AE3073700E075D8 /* FlightsDTO.swift in Sources */,
 				CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */,
 				CAADEEB72AE3F80400E9947C /* SceneDelegate.swift in Sources */,
+				CAADEF792AE5BCB100E9947C /* NearAirportDTO.swift in Sources */,
 				CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */,
 				CAADEEB42AE3F7EB00E9947C /* AppDelegate.swift in Sources */,
 				CA36E2102AE30D5200E075D8 /* HomeRepository.swift in Sources */,
@@ -907,7 +908,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */,
 				CAADEF5F2AE5911000E9947C /* TokenEndpoint.swift in Sources */,
 				CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */,
 				CAADEF702AE59BCE00E9947C /* TokenManagerFactory.swift in Sources */,
@@ -1086,6 +1086,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlightApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ZH35KKWH9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlightApp/Info.plist;
@@ -1094,6 +1095,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1116,6 +1118,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlightApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8ZH35KKWH9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlightApp/Info.plist;
@@ -1124,6 +1127,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

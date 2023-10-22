@@ -6,19 +6,24 @@
 //
 
 import TokenManager
+import Combine
 
 protocol AppManagerProtocol {
-    func updateAcesstoken()
+    func updateAcesstoken(completion: @escaping () -> ())
 }
 
-final class AppManager {
-    let tokenManager: APITokenManagerProtocol
+final class AppManager: AppManagerProtocol {
+    private let tokenManager: APITokenManagerProtocol
+    private var cancellable = Set<AnyCancellable>()
 
     init(tokenManager: APITokenManagerProtocol) {
         self.tokenManager = tokenManager
     }
 
-    func updateAcesstoken() {
-        tokenManager.getAndSaveAccessTokenIfNeeded()
+    @MainActor func updateAcesstoken(completion: @escaping () -> ()) {
+        Task {
+            await tokenManager.getAndSaveAccessTokenIfNeeded()
+            completion()
+        }
     }
 }

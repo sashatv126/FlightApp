@@ -8,12 +8,18 @@
 import NetworkService
 
 protocol HomeNetworkProviderProtocol {
-    func getFlights(dto: StartLocationDTO) -> Endpoint
+    func getAirport(dto: StartLocationDTO) -> Endpoint
+    func getFlights(dto: AirportDTO) -> Endpoint
 }
 
 final class HomeNetworkProvider: HomeNetworkProviderProtocol {
-    func getFlights(dto: StartLocationDTO) -> Endpoint {
+    func getAirport(dto: StartLocationDTO) -> Endpoint {
         let endpoint = HomeEndpoint.nearAirPort(entity: dto)
+        return endpoint
+    }
+
+    func getFlights(dto: AirportDTO) -> Endpoint {
+        let endpoint = HomeEndpoint.flights(entity: dto)
         return endpoint
     }
 }

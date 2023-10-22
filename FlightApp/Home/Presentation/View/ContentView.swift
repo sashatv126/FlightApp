@@ -34,24 +34,14 @@ struct ContentView<ViewModel>: View where ViewModel: HomeViewModelProtocol {
 
 struct TicketListRowView: View {
 
-    let flight: Flight
+    let flight: FullInfoOfFlight
 
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("30 june")
-                    .font(.custom("Futura-Medium", size: 15.0, relativeTo: .subheadline))
-                Text("DATE")
-                    .font(.caption2)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.gray)
-            }
-            .frame(width: 40.0, alignment: .leading)
-            Divider()
-            VStack(alignment: .leading) {
-                Text(flight.startLocationCode)
+                Text(flight.airport.iataCode)
                     .font(.custom("Futura-Medium", size: 20.0, relativeTo: .title3))
-                Text(flight.startCity)
+                Text(flight.airport.address.cityName)
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
@@ -65,9 +55,9 @@ struct TicketListRowView: View {
                 .foregroundColor(.blue)
             Spacer()
             VStack(alignment: .trailing) {
-                Text(flight.endLocationCode)
+                Text(flight.flight.iataCode)
                     .font(.custom("Futura-Medium", size: 20.0, relativeTo: .title3))
-                Text(flight.endCity)
+                Text(flight.flight.name)
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
@@ -80,7 +70,7 @@ struct TicketListRowView: View {
 
 struct FlightlistTableView: View {
     @EnvironmentObject var coordinator: Coordinator<HomeRouter>
-    let flights: [Flight]
+    let flights: AllFlights
 
     var body: some View {
         List {

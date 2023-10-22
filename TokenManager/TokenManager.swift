@@ -6,11 +6,12 @@
 //
 
 import KeychainManager
+import Combine
 
 public typealias AccessToken = String
 
 public protocol APITokenManagerProtocol {
-    func getAndSaveAccessTokenIfNeeded()
+    func getAndSaveAccessTokenIfNeeded() async
 }
 
 final public class APITokenManager<Keychain: KeychainManagerProtocol> where Keychain.Key == TokenManagerKey {
@@ -19,22 +20,20 @@ final public class APITokenManager<Keychain: KeychainManagerProtocol> where Keyc
     private let networkProvider: TokenNetworkProviderProtocol
 
     init(keychain: Keychain,
-                networkProvider: TokenNetworkProviderProtocol) {
+         networkProvider: TokenNetworkProviderProtocol) {
         self.keychain = keychain
         self.networkProvider = networkProvider
     }
 }
 
 extension APITokenManager: APITokenManagerProtocol {
-    public func getAndSaveAccessTokenIfNeeded() {
-        Task { [weak self] in
-            guard let result = await self?.networkProvider.fetchRequest() else { return }
-            switch result {
-            case .success(let token):
-                try? self?.keychain.saveValue(value: token, by: .accessToken)
-            case .failure(let failure):
-                print(failure)
-            }
+    public func getAndSaveAccessTokenIfNeeded() async {
+        let result = await networkProvider.fetchRequest()
+        switch result {
+        case .success(let token):
+            try? keychain.saveValue(value: token, by: .accessToken)
+        case .failure(let failure):
+            print(failure)
         }
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Location
 
 protocol ManagerFactoryProtocol {
     func createLocationManager() -> LocationManagerProtocol

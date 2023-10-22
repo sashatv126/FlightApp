@@ -8,7 +8,8 @@
 import NetworkService
 
 protocol HomeAPIDataSourceProtocol {
-    func execute(dto: StartLocationDTO) async -> Result<FlightsDTO,ApiError>
+    func execute(dto: StartLocationDTO) async -> Result<NearAirportDTO,ApiError>
+    func execute(dto: AirportDTO) async -> Result<FlightsDTO,ApiError>
 }
 
 final class HomeAPIDataSource {
@@ -23,7 +24,14 @@ final class HomeAPIDataSource {
 }
 
 extension HomeAPIDataSource: HomeAPIDataSourceProtocol {
-    func execute(dto: StartLocationDTO) async -> Result<FlightsDTO,ApiError> {
+    func execute(dto: StartLocationDTO) async -> Result<NearAirportDTO,ApiError> {
+        let endpoint = provider.getAirport(dto: dto)
+        let result = await networkProvider.execute(endpoint: endpoint,
+                                                   modelType: NearAirportDTO.self)
+        return result
+    }
+
+    func execute(dto: AirportDTO) async -> Result<FlightsDTO,ApiError> {
         let endpoint = provider.getFlights(dto: dto)
         let result = await networkProvider.execute(endpoint: endpoint,
                                                    modelType: FlightsDTO.self)

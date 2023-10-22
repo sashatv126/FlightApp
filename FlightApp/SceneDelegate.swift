@@ -11,15 +11,17 @@ import TokenManager
 import KeychainManager
 import NetworkService
 
-final class SceneDelegate: NSObject, UIWindowSceneDelegate {
-
+@MainActor final class SceneDelegate: NSObject, UIWindowSceneDelegate {
+    
     private let coordinatorFactory: CoordinatorFactory = {
         let managerFactory = ManagerFactory()
         return CoordinatorFactory(managerFactory: managerFactory)
     }()
-
+    
+    private var appManager: AppManagerProtocol?
+    
     var window: UIWindow?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let homeCoordinator = coordinatorFactory.createHomeCoordinator()
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -28,10 +30,12 @@ final class SceneDelegate: NSObject, UIWindowSceneDelegate {
         let tokenManagerFactory = TokenManagerFactory(networkProvider: networkProvider)
         let tokenManager = tokenManagerFactory.createTokenManager()
         let appManager = AppManager(tokenManager: tokenManager)
-        appManager.updateAcesstoken()
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = homeCoordinator.navigationController
-        window?.makeKeyAndVisible()
-        homeCoordinator.start()
+        self.appManager = appManager
+        appManager.updateAcesstoken { [weak self] in
+            self?.window = UIWindow(windowScene: windowScene)
+            self?.window?.rootViewController = homeCoordinator.navigationController
+            self?.window?.makeKeyAndVisible()
+            homeCoordinator.start()
+        }
     }
 }

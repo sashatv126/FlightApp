@@ -11,7 +11,8 @@ enum NetworkConstants {
     }
 
     enum Paths {
-        static let getFlights = "v1/reference-data/locations/airports"
+        static let airports = "v1/reference-data/locations/airports"
+        static let flights = "v1/airport/direct-destinations"
     }
 
     enum APIKey {
