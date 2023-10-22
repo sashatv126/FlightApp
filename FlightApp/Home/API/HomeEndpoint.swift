@@ -7,13 +7,43 @@
 
 import NetworkService
 
-struct HomeEndpoint: Endpoint {
+enum HomeEndpoint {
 
-    var baseUrl: String = NetworkConstants.BaseURL.wb
-    var path: String
-    var parameters: [String: Any]?
-    var data: Data?
-    var header: HTTPHeaders = [:]
-    var method: HTTPMethod
+    case nearAirPort(entity: StartLocationDTO)
 }
 
+extension HomeEndpoint: Endpoint {
+    var baseUrl: String {
+        return NetworkConstants.BaseURL.wb
+    }
+    
+    var path: String {
+        return NetworkConstants.Paths.getFlights
+    }
+    
+    var parameters: [String : Any]? {
+        switch self {
+        case .nearAirPort(let entity):
+            return ["latitude": entity.latitude,
+                    "longitude": entity.longitude]
+        }
+    }
+    
+    var data: Data? {
+        switch self {
+        case .nearAirPort:
+            return nil
+        }
+    }
+    
+    var header: HTTPHeaders {
+        return ["Authorization":"Bearer \(NetworkConstants.APIKey.flightsApiKey)"]
+    }
+    
+    var method: HTTPMethod {
+        switch self {
+        case .nearAirPort:
+            return .get
+        }
+    }
+}

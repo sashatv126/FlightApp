@@ -13,10 +13,7 @@ protocol HomeNetworkProviderProtocol {
 
 final class HomeNetworkProvider: HomeNetworkProviderProtocol {
     func getFlights(dto: StartLocationDTO) -> Endpoint {
-        let data = dto.toData()
-        let endpoint = HomeEndpoint(path: NetworkConstants.Paths.getFlights,
-                                    data: data,
-                                    method: .post)
+        let endpoint = HomeEndpoint.nearAirPort(entity: dto)
         return endpoint
     }
 }

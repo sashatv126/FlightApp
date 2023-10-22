@@ -10,7 +10,10 @@ import Coordinator
 
 final class SceneDelegate: NSObject, UIWindowSceneDelegate {
 
-    private let coordinatorFactory = CoordinatorFactory()
+    private let coordinatorFactory: CoordinatorFactory = {
+        let managerFactory = ManagerFactory()
+        return CoordinatorFactory(managerFactory: managerFactory)
+    }()
 
     var window: UIWindow?
 

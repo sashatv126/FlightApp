@@ -7,6 +7,7 @@
 
 import Combine
 import NetworkService
+import Location
 
 protocol HomeViewModelProtocol: ObservableObject {
     var flights: [Flight] { get }
@@ -17,24 +18,35 @@ protocol HomeViewModelProtocol: ObservableObject {
 @MainActor final class HomeViewModel {
     @Published var flights: [Flight] = []
     private let getFlightsUseCase: GetFlightsUseCaseProtocol
+    private let locationManager: LocationManagerProtocol
     private var needToUpdate = true
+    private var cancellables = Set<AnyCancellable>()
 
-    init(getFlightsUseCase: GetFlightsUseCaseProtocol) {
+    init(getFlightsUseCase: GetFlightsUseCaseProtocol,
+         locationManager: LocationManagerProtocol) {
         self.getFlightsUseCase = getFlightsUseCase
+        self.locationManager = locationManager
     }
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
 
     func viewDidAppear() {
-        getFlights()
+        locationManager.startMonitoringLocation()
+
+        locationManager.currentLocationPublisher
+            .sink { [weak self] currentLocation in
+                guard let currentLocation else { return }
+                let entity = StartLocationEntity(latitude: currentLocation.latitude,
+                                                longitude: currentLocation.longitude)
+                self?.getFlights(entity: entity)
+            }.store(in: &cancellables)
     }
 }
 
 private extension HomeViewModel {
-    func getFlights() {
+    func getFlights(entity: StartLocationEntity) {
         guard needToUpdate else { return }
-        let entity = StartLocationEntity()
         Task { [weak self] in
             let result = await self?.getFlightsUseCase.execute(entity: entity)
             guard let result else { return }

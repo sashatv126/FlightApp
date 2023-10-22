@@ -35,6 +35,26 @@
 		CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEBB2AE3F84900E9947C /* HomeRouter.swift */; };
 		CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */; };
 		CAADEEC32AE4086D00E9947C /* HomeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */; };
+		CAADEEE12AE55FCE00E9947C /* ManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEE02AE55FCE00E9947C /* ManagerFactory.swift */; };
+		CAADEEE42AE571AB00E9947C /* ApiTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */; };
+		CAADEEEB2AE572CB00E9947C /* ApiTokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */; };
+		CAADEF252AE5758500E9947C /* libKeychainManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF242AE5757F00E9947C /* libKeychainManager.a */; };
+		CAADEF2B2AE57CCA00E9947C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF2A2AE57CCA00E9947C /* LocationManager.swift */; };
+		CAADEF3B2AE58F4B00E9947C /* TokenManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF332AE58F4A00E9947C /* TokenManager.framework */; };
+		CAADEF422AE58F4B00E9947C /* TokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF412AE58F4B00E9947C /* TokenManagerTests.swift */; };
+		CAADEF432AE58F4B00E9947C /* TokenManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CAADEF352AE58F4A00E9947C /* TokenManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAADEF462AE58F4B00E9947C /* TokenManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF332AE58F4A00E9947C /* TokenManager.framework */; };
+		CAADEF472AE58F4B00E9947C /* TokenManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF332AE58F4A00E9947C /* TokenManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAADEF4E2AE58F5400E9947C /* NetworkService.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */; };
+		CAADEF4F2AE58F5400E9947C /* NetworkService.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAADEF512AE58F5A00E9947C /* libKeychainManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF242AE5757F00E9947C /* libKeychainManager.a */; };
+		CAADEF542AE58FAE00E9947C /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF532AE58FAE00E9947C /* TokenManager.swift */; };
+		CAADEF5B2AE5905F00E9947C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF5A2AE5905F00E9947C /* UserData.swift */; };
+		CAADEF5D2AE5907400E9947C /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */; };
+		CAADEF5F2AE5911000E9947C /* TokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF5E2AE5911000E9947C /* TokenEndpoint.swift */; };
+		CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF622AE5914500E9947C /* APIConstants.swift */; };
+		CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF642AE5921300E9947C /* APIKeyModel.swift */; };
+		CAADEF672AE592D200E9947C /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF662AE592D200E9947C /* TokenProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +86,34 @@
 			remoteGlobalIDString = CAADEE8F2AE3F07D00E9947C;
 			remoteInfo = CoordinatorTests;
 		};
+		CAADEF232AE5757F00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAADEF1F2AE5757F00E9947C /* KeychainManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CAADEF152AE5755E00E9947C;
+			remoteInfo = KeychainManager;
+		};
+		CAADEF3C2AE58F4B00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAADEF322AE58F4A00E9947C;
+			remoteInfo = TokenManager;
+		};
+		CAADEF3E2AE58F4B00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA4C8B432AE1C0A000BADA65;
+			remoteInfo = FlightApp;
+		};
+		CAADEF442AE58F4B00E9947C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA4C8B3C2AE1C0A000BADA65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAADEF322AE58F4A00E9947C;
+			remoteInfo = TokenManager;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +125,18 @@
 			files = (
 				CAADEE7A2AE32D0E00E9947C /* NetworkService.xcframework in Embed Frameworks */,
 				CAADEEB92AE3F83100E9947C /* Coordinator.framework in Embed Frameworks */,
+				CAADEF472AE58F4B00E9947C /* TokenManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAADEF502AE58F5400E9947C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CAADEF4F2AE58F5400E9947C /* NetworkService.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +174,22 @@
 		CAADEEBB2AE3F84900E9947C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFactory.swift; sourceTree = "<group>"; };
+		CAADEEE02AE55FCE00E9947C /* ManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFactory.swift; sourceTree = "<group>"; };
+		CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTokenService.swift; sourceTree = "<group>"; };
+		CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTokenEndpoint.swift; sourceTree = "<group>"; };
+		CAADEF1F2AE5757F00E9947C /* KeychainManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainManager.xcodeproj; path = KeychainManager/KeychainManager.xcodeproj; sourceTree = "<group>"; };
+		CAADEF2A2AE57CCA00E9947C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CAADEF332AE58F4A00E9947C /* TokenManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TokenManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAADEF352AE58F4A00E9947C /* TokenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenManager.h; sourceTree = "<group>"; };
+		CAADEF3A2AE58F4B00E9947C /* TokenManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokenManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAADEF412AE58F4B00E9947C /* TokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerTests.swift; sourceTree = "<group>"; };
+		CAADEF532AE58FAE00E9947C /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		CAADEF5A2AE5905F00E9947C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		CAADEF5E2AE5911000E9947C /* TokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEndpoint.swift; sourceTree = "<group>"; };
+		CAADEF622AE5914500E9947C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		CAADEF642AE5921300E9947C /* APIKeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyModel.swift; sourceTree = "<group>"; };
+		CAADEF662AE592D200E9947C /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAADEE792AE32D0E00E9947C /* NetworkService.xcframework in Frameworks */,
+				CAADEF252AE5758500E9947C /* libKeychainManager.a in Frameworks */,
+				CAADEF462AE58F4B00E9947C /* TokenManager.framework in Frameworks */,
 				CAADEEB82AE3F83100E9947C /* Coordinator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +215,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAADEF302AE58F4A00E9947C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAADEF4E2AE58F5400E9947C /* NetworkService.xcframework in Frameworks */,
+				CAADEF512AE58F5A00E9947C /* libKeychainManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAADEF372AE58F4B00E9947C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAADEF3B2AE58F4B00E9947C /* TokenManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +301,8 @@
 				CA4C8B462AE1C0A000BADA65 /* FlightApp */,
 				CA4C8B592AE1C0A100BADA65 /* FlightAppTests */,
 				CA4C8B632AE1C0A100BADA65 /* FlightAppUITests */,
+				CAADEF342AE58F4A00E9947C /* TokenManager */,
+				CAADEF402AE58F4B00E9947C /* TokenManagerTests */,
 				CA4C8B452AE1C0A000BADA65 /* Products */,
 				CAADEE772AE32D0E00E9947C /* Frameworks */,
 			);
@@ -217,6 +314,8 @@
 				CA4C8B442AE1C0A000BADA65 /* FlightApp.app */,
 				CA4C8B562AE1C0A100BADA65 /* FlightAppTests.xctest */,
 				CA4C8B602AE1C0A100BADA65 /* FlightAppUITests.xctest */,
+				CAADEF332AE58F4A00E9947C /* TokenManager.framework */,
+				CAADEF3A2AE58F4B00E9947C /* TokenManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,7 +327,6 @@
 				CA4C8BC42AE280E900BADA65 /* Common */,
 				CA4C8BB12AE2511A00BADA65 /* Core */,
 				CA4C8BA52AE1D0A500BADA65 /* Home */,
-				CA4C8B492AE1C0A000BADA65 /* ContentView.swift */,
 				CA4C8B4B2AE1C0A000BADA65 /* Item.swift */,
 				CA4C8B4D2AE1C0A100BADA65 /* Assets.xcassets */,
 				CA4C8B4F2AE1C0A100BADA65 /* Preview Content */,
@@ -266,10 +364,10 @@
 		CA4C8BA52AE1D0A500BADA65 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C8BA62AE1D0B700BADA65 /* API */,
 				CA4C8BC32AE280C400BADA65 /* Domain */,
 				CA4C8BC22AE280B900BADA65 /* Data */,
 				CA4C8BAA2AE1D1CD00BADA65 /* Presentation */,
-				CA4C8BA62AE1D0B700BADA65 /* API */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -304,17 +402,10 @@
 		CA4C8BB12AE2511A00BADA65 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEEE22AE5719700E9947C /* Services */,
 				CAADEEBE2AE407FD00E9947C /* Factories */,
-				CA4C8BB32AE2512600BADA65 /* Extensions */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		CA4C8BB32AE2512600BADA65 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CA4C8BC22AE280B900BADA65 /* Data */ = {
@@ -366,6 +457,7 @@
 		CAADEE772AE32D0E00E9947C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEF1F2AE5757F00E9947C /* KeychainManager.xcodeproj */,
 				CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */,
 				CAADEE782AE32D0E00E9947C /* NetworkService.xcframework */,
 			);
@@ -393,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */,
+				CAADEEE02AE55FCE00E9947C /* ManagerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -408,11 +501,120 @@
 		CAADEEC42AE409AE00E9947C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA4C8B492AE1C0A000BADA65 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		CAADEEE22AE5719700E9947C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF292AE57CBE00E9947C /* Location */,
+				CAADEEE92AE572AF00E9947C /* APITokenService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CAADEEE92AE572AF00E9947C /* APITokenService */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */,
+				CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */,
+			);
+			path = APITokenService;
+			sourceTree = "<group>";
+		};
+		CAADEF202AE5757F00E9947C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF242AE5757F00E9947C /* libKeychainManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAADEF292AE57CBE00E9947C /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF2A2AE57CCA00E9947C /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		CAADEF342AE58F4A00E9947C /* TokenManager */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF602AE5913100E9947C /* Entity */,
+				CAADEF592AE5905700E9947C /* Model */,
+				CAADEF582AE58FF800E9947C /* Constants */,
+				CAADEF572AE58FEA00E9947C /* Endpoint */,
+				CAADEF532AE58FAE00E9947C /* TokenManager.swift */,
+				CAADEF552AE58FB200E9947C /* Provider */,
+				CAADEF352AE58F4A00E9947C /* TokenManager.h */,
+			);
+			path = TokenManager;
+			sourceTree = "<group>";
+		};
+		CAADEF402AE58F4B00E9947C /* TokenManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF412AE58F4B00E9947C /* TokenManagerTests.swift */,
+			);
+			path = TokenManagerTests;
+			sourceTree = "<group>";
+		};
+		CAADEF552AE58FB200E9947C /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF662AE592D200E9947C /* TokenProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		CAADEF572AE58FEA00E9947C /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF5E2AE5911000E9947C /* TokenEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		CAADEF582AE58FF800E9947C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */,
+				CAADEF622AE5914500E9947C /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CAADEF592AE5905700E9947C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF5A2AE5905F00E9947C /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAADEF602AE5913100E9947C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF642AE5921300E9947C /* APIKeyModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CAADEF2E2AE58F4A00E9947C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAADEF432AE58F4B00E9947C /* TokenManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CA4C8B432AE1C0A000BADA65 /* FlightApp */ = {
@@ -427,6 +629,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CAADEF452AE58F4B00E9947C /* PBXTargetDependency */,
 			);
 			name = FlightApp;
 			productName = FlightApp;
@@ -469,6 +672,44 @@
 			productReference = CA4C8B602AE1C0A100BADA65 /* FlightAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CAADEF322AE58F4A00E9947C /* TokenManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAADEF482AE58F4B00E9947C /* Build configuration list for PBXNativeTarget "TokenManager" */;
+			buildPhases = (
+				CAADEF2E2AE58F4A00E9947C /* Headers */,
+				CAADEF2F2AE58F4A00E9947C /* Sources */,
+				CAADEF302AE58F4A00E9947C /* Frameworks */,
+				CAADEF312AE58F4A00E9947C /* Resources */,
+				CAADEF502AE58F5400E9947C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TokenManager;
+			productName = TokenManager;
+			productReference = CAADEF332AE58F4A00E9947C /* TokenManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAADEF392AE58F4B00E9947C /* TokenManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAADEF4B2AE58F4B00E9947C /* Build configuration list for PBXNativeTarget "TokenManagerTests" */;
+			buildPhases = (
+				CAADEF362AE58F4B00E9947C /* Sources */,
+				CAADEF372AE58F4B00E9947C /* Frameworks */,
+				CAADEF382AE58F4B00E9947C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAADEF3D2AE58F4B00E9947C /* PBXTargetDependency */,
+				CAADEF3F2AE58F4B00E9947C /* PBXTargetDependency */,
+			);
+			name = TokenManagerTests;
+			productName = TokenManagerTests;
+			productReference = CAADEF3A2AE58F4B00E9947C /* TokenManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,6 +731,14 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = CA4C8B432AE1C0A000BADA65;
 					};
+					CAADEF322AE58F4A00E9947C = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+					CAADEF392AE58F4B00E9947C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CA4C8B432AE1C0A000BADA65;
+					};
 				};
 			};
 			buildConfigurationList = CA4C8B3F2AE1C0A000BADA65 /* Build configuration list for PBXProject "FlightApp" */;
@@ -508,12 +757,18 @@
 					ProductGroup = CAADEEA12AE3F09F00E9947C /* Products */;
 					ProjectRef = CAADEEA02AE3F09F00E9947C /* Coordinator.xcodeproj */;
 				},
+				{
+					ProductGroup = CAADEF202AE5757F00E9947C /* Products */;
+					ProjectRef = CAADEF1F2AE5757F00E9947C /* KeychainManager.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				CA4C8B432AE1C0A000BADA65 /* FlightApp */,
 				CA4C8B552AE1C0A100BADA65 /* FlightAppTests */,
 				CA4C8B5F2AE1C0A100BADA65 /* FlightAppUITests */,
+				CAADEF322AE58F4A00E9947C /* TokenManager */,
+				CAADEF392AE58F4B00E9947C /* TokenManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -531,6 +786,13 @@
 			fileType = wrapper.cfbundle;
 			path = CoordinatorTests.xctest;
 			remoteRef = CAADEEA72AE3F09F00E9947C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CAADEF242AE5757F00E9947C /* libKeychainManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKeychainManager.a;
+			remoteRef = CAADEF232AE5757F00E9947C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -559,6 +821,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAADEF312AE58F4A00E9947C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAADEF382AE58F4B00E9947C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -566,15 +842,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAADEEEB2AE572CB00E9947C /* ApiTokenEndpoint.swift in Sources */,
 				CA36E20A2AE3099D00E075D8 /* HomeAPIDataSource.swift in Sources */,
 				CA4C8BC72AE280F800BADA65 /* NetworkConstants.swift in Sources */,
 				CA4C8BAE2AE1D1ED00BADA65 /* HomeViewModel.swift in Sources */,
 				CA4C8BCA2AE293E700BADA65 /* HomeNetworkProvider.swift in Sources */,
 				CA36E2052AE3077800E075D8 /* StartLocationDTO.swift in Sources */,
 				CA36E2072AE307D200E075D8 /* Flights.swift in Sources */,
+				CAADEF2B2AE57CCA00E9947C /* LocationManager.swift in Sources */,
 				CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */,
 				CA36E2012AE3073700E075D8 /* FlightsDTO.swift in Sources */,
 				CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */,
+				CAADEEE42AE571AB00E9947C /* ApiTokenService.swift in Sources */,
 				CAADEEB72AE3F80400E9947C /* SceneDelegate.swift in Sources */,
 				CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */,
 				CAADEEB42AE3F7EB00E9947C /* AppDelegate.swift in Sources */,
@@ -584,6 +863,7 @@
 				CA36E2132AE310EB00E075D8 /* GetFlightsUseCase.swift in Sources */,
 				CAADEEC32AE4086D00E9947C /* HomeViewFactory.swift in Sources */,
 				CA36E2032AE3075800E075D8 /* StartLocationEntity.swift in Sources */,
+				CAADEEE12AE55FCE00E9947C /* ManagerFactory.swift in Sources */,
 				CA4C8BA92AE1D11600BADA65 /* HomeEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +885,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAADEF2F2AE58F4A00E9947C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */,
+				CAADEF5F2AE5911000E9947C /* TokenEndpoint.swift in Sources */,
+				CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */,
+				CAADEF5D2AE5907400E9947C /* NetworkConstants.swift in Sources */,
+				CAADEF5B2AE5905F00E9947C /* UserData.swift in Sources */,
+				CAADEF672AE592D200E9947C /* TokenProvider.swift in Sources */,
+				CAADEF542AE58FAE00E9947C /* TokenManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAADEF362AE58F4B00E9947C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAADEF422AE58F4B00E9947C /* TokenManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -617,6 +919,21 @@
 			isa = PBXTargetDependency;
 			target = CA4C8B432AE1C0A000BADA65 /* FlightApp */;
 			targetProxy = CA4C8B612AE1C0A100BADA65 /* PBXContainerItemProxy */;
+		};
+		CAADEF3D2AE58F4B00E9947C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAADEF322AE58F4A00E9947C /* TokenManager */;
+			targetProxy = CAADEF3C2AE58F4B00E9947C /* PBXContainerItemProxy */;
+		};
+		CAADEF3F2AE58F4B00E9947C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA4C8B432AE1C0A000BADA65 /* FlightApp */;
+			targetProxy = CAADEF3E2AE58F4B00E9947C /* PBXContainerItemProxy */;
+		};
+		CAADEF452AE58F4B00E9947C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAADEF322AE58F4A00E9947C /* TokenManager */;
+			targetProxy = CAADEF442AE58F4B00E9947C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -743,6 +1060,7 @@
 		CA4C8B6B2AE1C0A100BADA65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,6 +1090,7 @@
 		CA4C8B6C2AE1C0A100BADA65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -870,6 +1189,107 @@
 			};
 			name = Release;
 		};
+		CAADEF492AE58F4B00E9947C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.TokenManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CAADEF4A2AE58F4B00E9947C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.TokenManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAADEF4C2AE58F4B00E9947C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.TokenManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlightApp";
+			};
+			name = Debug;
+		};
+		CAADEF4D2AE58F4B00E9947C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FlightApp.TokenManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlightApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlightApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -905,6 +1325,24 @@
 			buildConfigurations = (
 				CA4C8B712AE1C0A100BADA65 /* Debug */,
 				CA4C8B722AE1C0A100BADA65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAADEF482AE58F4B00E9947C /* Build configuration list for PBXNativeTarget "TokenManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAADEF492AE58F4B00E9947C /* Debug */,
+				CAADEF4A2AE58F4B00E9947C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAADEF4B2AE58F4B00E9947C /* Build configuration list for PBXNativeTarget "TokenManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAADEF4C2AE58F4B00E9947C /* Debug */,
+				CAADEF4D2AE58F4B00E9947C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,5 +6,6 @@
 //
 
 struct StartLocationEntity {
-    let startLocationCode = "LED"
+    let latitude: Double
+    let longitude: Double
 }

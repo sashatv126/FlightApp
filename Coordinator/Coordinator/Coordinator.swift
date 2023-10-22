@@ -16,6 +16,7 @@ open class Coordinator<Router: NavigationRouter>: ObservableObject {
                 startingRouter: Router? = nil) {
         self.navigationController = navigationController
         self.startingRouter = startingRouter
+        navigationController.navigationBar.prefersLargeTitles = true
     }
 
     public func start() {

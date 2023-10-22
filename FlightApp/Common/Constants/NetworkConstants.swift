@@ -7,10 +7,14 @@
 
 enum NetworkConstants {
     enum BaseURL {
-        static let wb = "https://vmeste.wildberries.ru"
+        static let wb = "https://test.api.amadeus.com"
     }
 
     enum Paths {
-        static let getFlights = "stream/api/avia-service/v1/suggests/getCheap"
+        static let getFlights = "v1/reference-data/locations/airports"
+    }
+
+    enum APIKey {
+        static let flightsApiKey = "BtJ4mVfD61l5GzhPBiRKXVdafDPj"
     }
 }

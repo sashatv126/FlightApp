@@ -6,10 +6,12 @@
 //
 
 struct StartLocationDTO: Encodable {
-    let startLocationCode: String
+    let latitude: Double
+    let longitude: Double
 
     init(entity: StartLocationEntity) {
-        self.startLocationCode = entity.startLocationCode
+        self.latitude = entity.latitude
+        self.longitude = entity.longitude
     }
 }
 

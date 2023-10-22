@@ -13,7 +13,13 @@ protocol HomeViewFactoryProtocol {
     func makeDetailView() -> EmptyView
 }
 
-struct HomeViewFactory: HomeViewFactoryProtocol {
+final class HomeViewFactory: HomeViewFactoryProtocol {
+    private let managerFactory: ManagerFactoryProtocol
+
+    init(managerFactory: ManagerFactoryProtocol) {
+        self.managerFactory = managerFactory
+    }
+
     @MainActor func makeHomeView() -> ContentView<HomeViewModel> {
         let networkService = NetworkService()
         let networkProvider = NetworkProvider(networkService: networkService)
@@ -22,7 +28,9 @@ struct HomeViewFactory: HomeViewFactoryProtocol {
                                               networkProvider: networkProvider)
         let repository = HomeRepository(apiDataSource: apiDataSource)
         let getFlightsUseCase = GetFlightsUseCase(repository: repository)
-        let viewModel = HomeViewModel(getFlightsUseCase: getFlightsUseCase)
+        let locationManager = managerFactory.createLocationManager()
+        let viewModel = HomeViewModel(getFlightsUseCase: getFlightsUseCase,
+                                      locationManager: locationManager)
         let view = ContentView(vm: viewModel)
         return view
     }
@@ -30,16 +38,4 @@ struct HomeViewFactory: HomeViewFactoryProtocol {
     func makeDetailView() -> EmptyView {
         return EmptyView()
     }
-}
-
-protocol ProviderFactoryProtocol {
-
-}
-
-final class ProviderFactory {
-    
-}
-
-protocol HomeAPIDataSourceFactory {
-
 }
