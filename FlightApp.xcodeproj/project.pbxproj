@@ -36,8 +36,6 @@
 		CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */; };
 		CAADEEC32AE4086D00E9947C /* HomeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */; };
 		CAADEEE12AE55FCE00E9947C /* ManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEE02AE55FCE00E9947C /* ManagerFactory.swift */; };
-		CAADEEE42AE571AB00E9947C /* ApiTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */; };
-		CAADEEEB2AE572CB00E9947C /* ApiTokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */; };
 		CAADEF252AE5758500E9947C /* libKeychainManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF242AE5757F00E9947C /* libKeychainManager.a */; };
 		CAADEF2B2AE57CCA00E9947C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF2A2AE57CCA00E9947C /* LocationManager.swift */; };
 		CAADEF3B2AE58F4B00E9947C /* TokenManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAADEF332AE58F4A00E9947C /* TokenManager.framework */; };
@@ -55,6 +53,9 @@
 		CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF622AE5914500E9947C /* APIConstants.swift */; };
 		CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF642AE5921300E9947C /* APIKeyModel.swift */; };
 		CAADEF672AE592D200E9947C /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF662AE592D200E9947C /* TokenProvider.swift */; };
+		CAADEF6A2AE594E400E9947C /* TokenManagerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF692AE594E400E9947C /* TokenManagerKey.swift */; };
+		CAADEF6D2AE5969100E9947C /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF6C2AE5969100E9947C /* AppManager.swift */; };
+		CAADEF702AE59BCE00E9947C /* TokenManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEF6F2AE59BCE00E9947C /* TokenManagerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,8 +176,6 @@
 		CAADEEBF2AE4080F00E9947C /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		CAADEEC22AE4086D00E9947C /* HomeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFactory.swift; sourceTree = "<group>"; };
 		CAADEEE02AE55FCE00E9947C /* ManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerFactory.swift; sourceTree = "<group>"; };
-		CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTokenService.swift; sourceTree = "<group>"; };
-		CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTokenEndpoint.swift; sourceTree = "<group>"; };
 		CAADEF1F2AE5757F00E9947C /* KeychainManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainManager.xcodeproj; path = KeychainManager/KeychainManager.xcodeproj; sourceTree = "<group>"; };
 		CAADEF2A2AE57CCA00E9947C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CAADEF332AE58F4A00E9947C /* TokenManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TokenManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +189,9 @@
 		CAADEF622AE5914500E9947C /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CAADEF642AE5921300E9947C /* APIKeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyModel.swift; sourceTree = "<group>"; };
 		CAADEF662AE592D200E9947C /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		CAADEF692AE594E400E9947C /* TokenManagerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerKey.swift; sourceTree = "<group>"; };
+		CAADEF6C2AE5969100E9947C /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		CAADEF6F2AE59BCE00E9947C /* TokenManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManagerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +404,7 @@
 		CA4C8BB12AE2511A00BADA65 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CAADEEE22AE5719700E9947C /* Services */,
+				CAADEEE22AE5719700E9947C /* Managers */,
 				CAADEEBE2AE407FD00E9947C /* Factories */,
 			);
 			path = Core;
@@ -506,22 +508,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CAADEEE22AE5719700E9947C /* Services */ = {
+		CAADEEE22AE5719700E9947C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEF6B2AE5968800E9947C /* AppManager */,
 				CAADEF292AE57CBE00E9947C /* Location */,
-				CAADEEE92AE572AF00E9947C /* APITokenService */,
 			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		CAADEEE92AE572AF00E9947C /* APITokenService */ = {
-			isa = PBXGroup;
-			children = (
-				CAADEEE32AE571AB00E9947C /* ApiTokenService.swift */,
-				CAADEEEA2AE572CB00E9947C /* ApiTokenEndpoint.swift */,
-			);
-			path = APITokenService;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CAADEF202AE5757F00E9947C /* Products */ = {
@@ -543,6 +536,7 @@
 		CAADEF342AE58F4A00E9947C /* TokenManager */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEF6E2AE59BC200E9947C /* Factory */,
 				CAADEF602AE5913100E9947C /* Entity */,
 				CAADEF592AE5905700E9947C /* Model */,
 				CAADEF582AE58FF800E9947C /* Constants */,
@@ -581,6 +575,7 @@
 		CAADEF582AE58FF800E9947C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				CAADEF682AE594C900E9947C /* Keys */,
 				CAADEF5C2AE5907400E9947C /* NetworkConstants.swift */,
 				CAADEF622AE5914500E9947C /* APIConstants.swift */,
 			);
@@ -601,6 +596,30 @@
 				CAADEF642AE5921300E9947C /* APIKeyModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		CAADEF682AE594C900E9947C /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF692AE594E400E9947C /* TokenManagerKey.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		CAADEF6B2AE5968800E9947C /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF6C2AE5969100E9947C /* AppManager.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		CAADEF6E2AE59BC200E9947C /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CAADEF6F2AE59BCE00E9947C /* TokenManagerFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -842,7 +861,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAADEEEB2AE572CB00E9947C /* ApiTokenEndpoint.swift in Sources */,
 				CA36E20A2AE3099D00E075D8 /* HomeAPIDataSource.swift in Sources */,
 				CA4C8BC72AE280F800BADA65 /* NetworkConstants.swift in Sources */,
 				CA4C8BAE2AE1D1ED00BADA65 /* HomeViewModel.swift in Sources */,
@@ -850,10 +868,10 @@
 				CA36E2052AE3077800E075D8 /* StartLocationDTO.swift in Sources */,
 				CA36E2072AE307D200E075D8 /* Flights.swift in Sources */,
 				CAADEF2B2AE57CCA00E9947C /* LocationManager.swift in Sources */,
+				CAADEF6D2AE5969100E9947C /* AppManager.swift in Sources */,
 				CAADEEC02AE4080F00E9947C /* CoordinatorFactory.swift in Sources */,
 				CA36E2012AE3073700E075D8 /* FlightsDTO.swift in Sources */,
 				CAADEEBC2AE3F84900E9947C /* HomeRouter.swift in Sources */,
-				CAADEEE42AE571AB00E9947C /* ApiTokenService.swift in Sources */,
 				CAADEEB72AE3F80400E9947C /* SceneDelegate.swift in Sources */,
 				CA4C8B4A2AE1C0A000BADA65 /* ContentView.swift in Sources */,
 				CAADEEB42AE3F7EB00E9947C /* AppDelegate.swift in Sources */,
@@ -892,8 +910,10 @@
 				CAADEF652AE5921300E9947C /* APIKeyModel.swift in Sources */,
 				CAADEF5F2AE5911000E9947C /* TokenEndpoint.swift in Sources */,
 				CAADEF632AE5914500E9947C /* APIConstants.swift in Sources */,
+				CAADEF702AE59BCE00E9947C /* TokenManagerFactory.swift in Sources */,
 				CAADEF5D2AE5907400E9947C /* NetworkConstants.swift in Sources */,
 				CAADEF5B2AE5905F00E9947C /* UserData.swift in Sources */,
+				CAADEF6A2AE594E400E9947C /* TokenManagerKey.swift in Sources */,
 				CAADEF672AE592D200E9947C /* TokenProvider.swift in Sources */,
 				CAADEF542AE58FAE00E9947C /* TokenManager.swift in Sources */,
 			);

@@ -32,15 +32,15 @@ protocol HomeViewModelProtocol: ObservableObject {
 extension HomeViewModel: HomeViewModelProtocol {
 
     func viewDidAppear() {
-        locationManager.startMonitoringLocation()
-
-        locationManager.currentLocationPublisher
-            .sink { [weak self] currentLocation in
-                guard let currentLocation else { return }
-                let entity = StartLocationEntity(latitude: currentLocation.latitude,
-                                                longitude: currentLocation.longitude)
-                self?.getFlights(entity: entity)
-            }.store(in: &cancellables)
+//        locationManager.startMonitoringLocation()
+//
+//        locationManager.currentLocationPublisher
+//            .sink { [weak self] currentLocation in
+//                guard let currentLocation else { return }
+//                let entity = StartLocationEntity(latitude: currentLocation.latitude,
+//                                                longitude: currentLocation.longitude)
+//                self?.getFlights(entity: entity)
+//            }.store(in: &cancellables)
     }
 }
 
